@@ -25,6 +25,7 @@
 
   button.addEventListener('click', function onClick () {
     const car = VIRTUO.getCar();
+    console.log(car)
     const begin = document.querySelector('#rental .js-begin').value;
     const end = document.querySelector('#rental .js-end').value;
     const distance = document.querySelector('#rental .js-distance').value;

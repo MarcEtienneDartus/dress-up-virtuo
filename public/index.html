@@ -2,23 +2,132 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with govirtuo.com</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>
-    <div id="car">
-      <input class="js-name" type="text" placeholder="Car name"/>
-      <input class="js-price-by-day" type="number" placeholder="Price by day"/>
-      <input class="js-price-by-km" type="number" placeholder="Price by km"/>
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1">Virtuo</span>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="https://s3.eu-central-1.amazonaws.com/virtuo-user-files-prod/572f4f9563c9000f007735f8/5de6703573f341005e9e89e8-1575383102721-bo.png" class="card-img-top" alt="...">
+            <div class="card-body">              
+              <div class="CarTitle">
+                <img src="https://s3.eu-central-1.amazonaws.com/virtuo-user-files-prod/572f4f9563c9000f007735f8/5de6709ba0cc2e005e5c7ff4-1575383201103-bo.png">
+                <h5 class="card-title">X1</h5>
+              </div>
+              <!-- <div class="carPricing">
+                <p>258.5</p>
+              </div> -->
+              <p class="card-text">69€/j    0.10€/km</p>
+              <div class="carInfo">
+                <div class="carInfoItem">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="business-user--sprite"><path fill="currentColor" d="M67.05 67.05a3.45 3.45 0 0 1-6.9 0v-6.9c0-5.716-4.634-10.35-10.35-10.35H22.2c-5.716 0-10.35 4.634-10.35 10.35v6.9a3.45 3.45 0 0 1-6.9 0v-6.9c0-9.527 7.723-17.25 17.25-17.25h27.6c9.527 0 17.25 7.723 17.25 17.25v6.9zM36 36c-9.527 0-17.25-7.723-17.25-17.25S26.473 1.5 36 1.5c9.527 0 17.25 7.723 17.25 17.25S45.527 36 36 36zm0-6.9c5.716 0 10.35-4.634 10.35-10.35S41.716 8.4 36 8.4c-5.716 0-10.35 4.634-10.35 10.35S30.284 29.1 36 29.1z"></path></svg>
+                  <p>5</p>
+                </div>
+                <div class="carInfoItem">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2304" id="auto--sprite"><path fill="currentColor" d="M1058.836 1152c0 61.972-48.78 112.001-109.26 112.001H137.951c-146.097 0-146.097-224.001 0-224.001H950.57c59.981.499 108.515 50.524 108.515 112zm14.686-112.001c396.729 0 718.292-329.278 718.292-735.464 0-46.791-4.23-93.332-12.942-139.378-1.334-6.482-2.097-13.934-2.097-21.56 0-53.696 37.786-98.566 88.22-109.472l.736-.133c6.028-1.179 12.958-1.849 20.045-1.849 53.836 0 98.597 38.846 107.786 90.038l.097.666c11.448 59.735 17.174 120.713 17.174 181.688 0 529.882-419.627 959.465-937.312 959.465h-935.82v-224.001h936.067zm-257.35-869.368c0-61.972 49.032-112.001 109.512-112.001 60.232 0 109.26 50.024 109.26 112.001v1967.713c0 61.972-49.032 112.001-109.512 112.001-60.633-.702-109.519-50.013-109.519-110.749 0-.439.002-.878.009-1.321v.067V170.629zm-787.732 0c0-61.972 49.032-112.001 109.512-112.001 60.232 0 109.512 50.024 109.512 112.001v1967.713c0 61.972-49.28 112.001-109.512 112.001-60.633-.702-109.519-50.013-109.519-110.749 0-.439.002-.878.009-1.321v.067V170.629zm109.51 1093.37c-60.633-.702-109.519-50.013-109.519-110.749 0-.439.002-.878.009-1.321v.067c0-61.724 49.032-112.001 109.512-112.001h787.484c60.48 0 109.512 50.276 109.512 112.001 0 61.972-49.032 112.001-109.512 112.001H137.952zm1673.777 1007.995c-115.081-1.397-207.835-95.015-207.835-210.299 0-.878.004-1.76.016-2.635l-.002.133c0-117.475 93.085-212.801 207.819-212.801s207.819 95.326 207.819 212.801c.009.742.016 1.624.016 2.502 0 115.281-92.754 208.901-207.704 210.296l-.13.002z"></path></svg>
+                  <p>Auto</p>
+                </div>
+                <div class="carInfoItem">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" id="geolocation--sprite"><path fill="currentColor" d="M5.813 6.64a.75.75 0 0 1 .546.547l.65 2.598 3.414-7.208L3.215 5.99l2.598.65zm-4.995.298c-.683-.17-.776-1.104-.14-1.405l11-5.21c.638-.302 1.301.361 1 .998l-5.21 11c-.302.637-1.235.544-1.406-.14L5.013 7.988.818 6.938z"></path></svg>
+                  <p>GPS</p>
+                </div>
+                <div class="carInfoItem">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="bluetooth--sprite"><path fill="currentColor" d="M39.892 64.806V41.217l14.232 11.832-14.232 11.76zm0-34.021V7.2l14.232 11.76-14.232 11.828zm.94 5.216l18.328-15.24c.515-.436.84-1.083.84-1.805v-.014c0-.726-.328-1.376-.844-1.809l-.004-.003L39.047.514c-.024-.016-.052-.028-.076-.048a1.93 1.93 0 0 0-.194-.131l-.01-.005a2.308 2.308 0 0 0-.38-.183l-.016-.005-.2-.068a2.111 2.111 0 0 0-.448-.064h-.004l-.092-.008-.12.012c-.39.015-.748.136-1.052.333l.008-.005a2.185 2.185 0 0 0-.517.445l-.003.003c-.028.028-.056.052-.08.084l-.052.08a2.275 2.275 0 0 0-.226.382l-.006.014c-.032.068-.056.14-.08.216l-.068.216a2.481 2.481 0 0 0-.06.455v.005l-.008.092v29.121l-19.677-16.36a2.22 2.22 0 0 0-3.18.343l-.004.005c-.315.4-.504.91-.504 1.465 0 .726.325 1.376.837 1.812l20.784 17.283-20.781 17.28a2.374 2.374 0 0 0-.84 1.815c0 .555.19 1.065.508 1.47l-.004-.005a2.238 2.238 0 0 0 3.188.345l-.004.003 19.677-16.36v29.121l.008.092c.007.167.028.324.063.477l-.003-.017c.02.072.04.144.068.216.081.234.187.436.317.62l-.005-.008.048.08c.024.028.052.044.072.072a2.158 2.158 0 0 0 .617.506l.011.006c.048.024.092.06.144.08.093.043.204.084.32.116l.016.004c.04.008.072.024.112.036a2.361 2.361 0 0 0 .91.01l-.014.002.136-.04c.299-.075.56-.205.785-.38l-.005.004c.024-.02.056-.036.08-.06l20.109-16.612c.52-.436.848-1.086.848-1.812v-.015c0-.723-.325-1.37-.837-1.803l-.003-.003-18.328-15.24z"></path></svg>
+                  <p>bluetooth</p>
+                </div>
+              </div>
+              <!-- <a href="#" class="btn btn-primary">Choisir cette voiture</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="https://s3.eu-central-1.amazonaws.com/virtuo-user-files-prod/572f4f9563c9000f007735f8/5dc5c26b0b7ac90057a62bd7-1575388209187-bo.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <div class="CarTitle">
+                <img src="https://s3.eu-central-1.amazonaws.com/virtuo-user-files-prod/572f4f9563c9000f007735f8/5d5163ed38e6270065f1ea31-1565615098111-bo.png">
+                <h5 class="card-title">Nouvelle Classe A</h5>
+              </div>
+              <!-- <div class="carPricing">
+                <p>57€/j  0.12€/km</p>
+              </div> -->
+              <p class="card-text">57€/j    0.12€/km</p>
+              <div class="carInfo">
+                <div class="carInfoItem">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="business-user--sprite"><path fill="currentColor" d="M67.05 67.05a3.45 3.45 0 0 1-6.9 0v-6.9c0-5.716-4.634-10.35-10.35-10.35H22.2c-5.716 0-10.35 4.634-10.35 10.35v6.9a3.45 3.45 0 0 1-6.9 0v-6.9c0-9.527 7.723-17.25 17.25-17.25h27.6c9.527 0 17.25 7.723 17.25 17.25v6.9zM36 36c-9.527 0-17.25-7.723-17.25-17.25S26.473 1.5 36 1.5c9.527 0 17.25 7.723 17.25 17.25S45.527 36 36 36zm0-6.9c5.716 0 10.35-4.634 10.35-10.35S41.716 8.4 36 8.4c-5.716 0-10.35 4.634-10.35 10.35S30.284 29.1 36 29.1z"></path></svg>
+                  <p>5</p>
+                </div>
+                <div class="carInfoItem">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2304" id="auto--sprite"><path fill="currentColor" d="M1058.836 1152c0 61.972-48.78 112.001-109.26 112.001H137.951c-146.097 0-146.097-224.001 0-224.001H950.57c59.981.499 108.515 50.524 108.515 112zm14.686-112.001c396.729 0 718.292-329.278 718.292-735.464 0-46.791-4.23-93.332-12.942-139.378-1.334-6.482-2.097-13.934-2.097-21.56 0-53.696 37.786-98.566 88.22-109.472l.736-.133c6.028-1.179 12.958-1.849 20.045-1.849 53.836 0 98.597 38.846 107.786 90.038l.097.666c11.448 59.735 17.174 120.713 17.174 181.688 0 529.882-419.627 959.465-937.312 959.465h-935.82v-224.001h936.067zm-257.35-869.368c0-61.972 49.032-112.001 109.512-112.001 60.232 0 109.26 50.024 109.26 112.001v1967.713c0 61.972-49.032 112.001-109.512 112.001-60.633-.702-109.519-50.013-109.519-110.749 0-.439.002-.878.009-1.321v.067V170.629zm-787.732 0c0-61.972 49.032-112.001 109.512-112.001 60.232 0 109.512 50.024 109.512 112.001v1967.713c0 61.972-49.28 112.001-109.512 112.001-60.633-.702-109.519-50.013-109.519-110.749 0-.439.002-.878.009-1.321v.067V170.629zm109.51 1093.37c-60.633-.702-109.519-50.013-109.519-110.749 0-.439.002-.878.009-1.321v.067c0-61.724 49.032-112.001 109.512-112.001h787.484c60.48 0 109.512 50.276 109.512 112.001 0 61.972-49.032 112.001-109.512 112.001H137.952zm1673.777 1007.995c-115.081-1.397-207.835-95.015-207.835-210.299 0-.878.004-1.76.016-2.635l-.002.133c0-117.475 93.085-212.801 207.819-212.801s207.819 95.326 207.819 212.801c.009.742.016 1.624.016 2.502 0 115.281-92.754 208.901-207.704 210.296l-.13.002z"></path></svg>
+                  <p>Auto</p>
+                </div>
+                <div class="carInfoItem">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" id="geolocation--sprite"><path fill="currentColor" d="M5.813 6.64a.75.75 0 0 1 .546.547l.65 2.598 3.414-7.208L3.215 5.99l2.598.65zm-4.995.298c-.683-.17-.776-1.104-.14-1.405l11-5.21c.638-.302 1.301.361 1 .998l-5.21 11c-.302.637-1.235.544-1.406-.14L5.013 7.988.818 6.938z"></path></svg>
+                  <p>GPS</p>
+                </div>
+                <div class="carInfoItem">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" id="bluetooth--sprite"><path fill="currentColor" d="M39.892 64.806V41.217l14.232 11.832-14.232 11.76zm0-34.021V7.2l14.232 11.76-14.232 11.828zm.94 5.216l18.328-15.24c.515-.436.84-1.083.84-1.805v-.014c0-.726-.328-1.376-.844-1.809l-.004-.003L39.047.514c-.024-.016-.052-.028-.076-.048a1.93 1.93 0 0 0-.194-.131l-.01-.005a2.308 2.308 0 0 0-.38-.183l-.016-.005-.2-.068a2.111 2.111 0 0 0-.448-.064h-.004l-.092-.008-.12.012c-.39.015-.748.136-1.052.333l.008-.005a2.185 2.185 0 0 0-.517.445l-.003.003c-.028.028-.056.052-.08.084l-.052.08a2.275 2.275 0 0 0-.226.382l-.006.014c-.032.068-.056.14-.08.216l-.068.216a2.481 2.481 0 0 0-.06.455v.005l-.008.092v29.121l-19.677-16.36a2.22 2.22 0 0 0-3.18.343l-.004.005c-.315.4-.504.91-.504 1.465 0 .726.325 1.376.837 1.812l20.784 17.283-20.781 17.28a2.374 2.374 0 0 0-.84 1.815c0 .555.19 1.065.508 1.47l-.004-.005a2.238 2.238 0 0 0 3.188.345l-.004.003 19.677-16.36v29.121l.008.092c.007.167.028.324.063.477l-.003-.017c.02.072.04.144.068.216.081.234.187.436.317.62l-.005-.008.048.08c.024.028.052.044.072.072a2.158 2.158 0 0 0 .617.506l.011.006c.048.024.092.06.144.08.093.043.204.084.32.116l.016.004c.04.008.072.024.112.036a2.361 2.361 0 0 0 .91.01l-.014.002.136-.04c.299-.075.56-.205.785-.38l-.005.004c.024-.02.056-.036.08-.06l20.109-16.612c.52-.436.848-1.086.848-1.812v-.015c0-.723-.325-1.37-.837-1.803l-.003-.003-18.328-15.24z"></path></svg>
+                  <p>bluetooth</p>
+                </div>
+              </div>
+              <!-- <a href="#" class="btn btn-primary">Choisir cette voiture</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title">Réservation</h5>    
+              <div id="car">
+                <div class="input-group">
+                  <input type="text" class="form-control js-name" placeholder="Nom de la voiture">
+                </div>
+                <div class="input-group">
+                  <input type="number" class="form-control js-price-by-day" placeholder="Prix par jour">
+                  <div class="input-group-append">
+                    <span class="input-group-text">€/jour</span>
+                  </div>
+                </div>
+                <div class="input-group">
+                  <input type="number" class="form-control js-price-by-km" placeholder="Prix par km">
+                  <div class="input-group-append">
+                    <span class="input-group-text">€/km</span>
+                  </div>
+                </div>
+                <div id="rental">
+                  <div class="input-group">
+                    <input type="text" class="form-control js-name" placeholder="Nom du conducteur">
+                  </div>
+                  <div class="input-group">
+                    <input class="form-control js-begin" type="date" placeholder="Rental begin date"/>
+                  </div>
+                  <div class="input-group">
+                    <input class="form-control js-end" type="date" placeholder="Rental end date"/>
+                  </div>
+                  <div class="input-group">
+                    <input class="form-control js-distance" type="number" placeholder="Distance en km"/>
+                  </div>
+                  <div id="deductible">
+                    <p>Deductible option</p>
+                    <input class="js-option" type="checkbox" placeholder="Deductible option"/>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary" id="compute">Calcul du prix</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="rental">
-      <input class="js-name" type="text" placeholder="Driver name"/>
-      <input class="js-begin" type="date" placeholder="Rental begin date"/>
-      <input class="js-end" type="date" placeholder="Rental end date"/>
-      <input class="js-distance" type="number" placeholder="Distance in km"/>
-      <input class="js-option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
     <div id="actors"></div>
     <script src="virtuo.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js"></script><script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
 </html>
